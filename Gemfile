@@ -28,3 +28,6 @@ gem 'tzinfo-data', platforms: [:mswin, :mingw]
 # Precompilers
 gem 'slim', '3.0.7'
 gem 'coffee-script', '2.4.1'
+
+# Middleman GitHub Pages
+gem 'middleman-gh-pages'
