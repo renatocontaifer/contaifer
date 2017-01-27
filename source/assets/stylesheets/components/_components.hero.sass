@@ -1,0 +1,79 @@
+.hero
+  width: 100%
+  height: 100vh
+  display: flex
+  align-items: center
+
+.hero__content.container
+  padding: 0
+  // height: 100%
+
+.hero__about
+  display: flex
+  align-items: center
+  height: 100%
+
+  +bp(lg)
+    border-bottom: 1px solid #ccc
+
+.hero__photo
+  display: none
+  width: 40%
+  height: 100%
+  float: left
+
+  +bp(lg)
+    display: block
+    padding: 0 20px
+
+.hero__description
+  // padding: 0 15px
+
+  +bp(lg)
+    width: 60%
+    float: right
+
+
+.hero__copy
+  // margin-left: -30px
+  h3
+    font-family: $sans-serif
+    font-size: 14px
+    margin-bottom: 30px
+    font-weight: normal
+
+    +bp(sm)
+    font-size: 20px
+
+    a
+      color: $color-black
+
+.tagline--primary
+  font-family: 'montserratextra_bold'
+  text-transform: uppercase
+  line-height: 1
+  font-size: 38px
+  letter-spacing: 0.01em
+  line-height: 1
+  color: $color-brand
+  margin: 0
+
+  +bp(sm)
+    font-size: 65px
+
+  +bp(md)
+    font-size: 80px
+
+.tagline--secondary
+  font-family: 'montserratextra_bold'
+  text-transform: uppercase
+  line-height: 1
+  font-size: 14px
+  letter-spacing: 0.2em
+  margin-bottom: 30px
+
+  +bp(sm)
+    font-size: 20px
+
+  +bp(md)
+    font-size: 28px

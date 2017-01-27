@@ -1,0 +1,62 @@
+.footer
+  text-align: center
+
+.contact
+  background: $color-brand
+  color: $color-white
+  padding: 50px 0
+  clear: both
+
+.logo--footer
+  position: relative
+  top: auto
+  left: auto
+  right: auto
+  +replace()
+  background: url(../images/logo--footer.svg)
+  background-size: contain
+  width: 50px
+  height: 50px
+  cursor: pointer
+  margin: 0 auto 20px auto
+
+.social
+  margin: 0
+  a
+    color: $color-white
+    font-family: 'montserratregular'
+    text-transform: uppercase
+    text-decoration: none
+    font-size: 13px
+    line-height: 3
+    letter-spacing: 0.1em
+
+.social__item
+
+  +bp(md)
+    display: inline
+    margin-right: 10px
+
+    &:last-child
+      margin-right: 0
+
+
+.partners
+  padding: 50px 0
+
+.partners__list
+  margin: 0
+  padding: 0 30px
+
+.partner__item
+  display: inline
+  font-size: 12px
+  letter-spacing: 0.1em
+
+  a
+    color: $color-black
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+

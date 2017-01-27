@@ -1,0 +1,165 @@
+h2
+  text-transform: uppercase
+  font-size: 24px
+  letter-spacing: 0.1em
+  margin-bottom: 10px
+
+
+.about
+  +bp(md)
+    display: flex
+    align-items: flex-start
+    margin-top: 90px
+
+.about__photo
+  position: relative
+  text-align: right
+  display: flex
+  align-items: center
+  margin: 60px 0 30px 0
+
+  +bp(md)
+    +i(5/12)
+    margin-top: 0
+
+.about__image
+  position: relative
+
+.about__title
+  position: absolute
+  width: 100%
+  z-index: 2
+  text-align: right
+  padding: 15px
+  margin-top: 15px
+  bottom: 40px
+
+  &:before
+    content: ''
+    background: $color-white
+    height: 4px
+    width: 35px
+    display: inline-block
+    margin-right: 5px
+    margin-bottom: 20px
+
+  span
+    // display: inline-block
+    // width: 100%
+    font-size: 36px
+
+  .section__title
+    color: $color-white
+    font-size: 14px
+    letter-spacing: 0.5em
+    text-align: right
+
+.about__description
+
+  +bp(md)
+    +i(7/12 md)
+    padding-left: 30px
+
+  h2
+    display: none
+
+    +bp(md)
+      display: block
+
+.section__title
+  font-size: 16px
+  letter-spacing: 0.5em
+  text-align: left
+  margin-top: 60px
+  margin-bottom: 20px
+
+  +bp(md)
+    margin-top: 30px
+    font-size: 22px
+
+  &:before
+    content: ''
+    background: $color-black
+    height: 4px
+    width: 35px
+    display: block
+    margin-left: 0
+    margin-bottom: 20px
+
+  span
+    display: inline-block
+    width: 100%
+    font-size: 40px
+    line-height: 1
+    letter-spacing: 0.15em
+
+    +bp(md)
+      font-size: 52px
+
+// Portfólio
+
+.portfolio__list
+  margin: 0
+  text-align: left
+
+.portfolio__item
+  margin-bottom: 60px
+  &:first-child
+    margin-bottom: 20px
+
+.caption
+  position: relatpost
+  p
+    margin-bottom: 10px
+    letter-spacing: 0.05em
+
+.portfolio__title
+  font-size: 14px
+  text-transform: uppercase
+  letter-spacing: 0.15em
+  margin-top: 20px
+  margin-bottom: 5px
+
+
+// Blog
+
+.blog__list
+  margin: 0
+
+  +bp(md)
+    // display: flex
+
+.blog__post
+  margin-bottom: 60px
+  display: block
+  margin-left: 0
+
+  +bp(md)
+    float: left
+    width: 50%
+    padding: 20px
+
+  h3
+    margin-bottom: 10px
+    letter-spacing: 0
+    line-height: 1.3
+
+  p
+    margin-bottom: 10px
+
+
+h4
+  font-family: 'montserratsemi_bold'
+  font-size: 12px
+  letter-spacing: 0.3em
+  text-transform: uppercase
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+ul
+  list-style-type: none
+  padding: 0
+
+.some-stuff
+  margin-top: 60px
+
+  +bp(md)
+    margin-top: 0
+
+.skills
+  padding: 0
+  margin: 0
+
+.skills__list
+  margin: 0
+  +bp(md)
+    display: flex
+
+  h3
+    font-family: 'montserratregular'
+    text-transform: uppercase
+    font-size: 13px
+    letter-spacing: 0.02em
+    margin: 0
+    transition: 0.5s ease all
+
+    +bp(md)
+      margin-top: 300px
+      margin-bottom: 30px
+
+  p
+    display: none
+
+    +bp(md)
+      display: block
+
+.skills__item
+  padding: 20px
+  position: relative
+
+  +bp(md)
+    +i(1/5)
+    height: 380px
+    overflow: hidden
+    cursor: pointer
+
+  &:hover
+    h3
+      margin-top: 30px
+
+.skills__item.palette1
+  background: $color-brand
+
+.skills__item.palette2
+  background: $color-yellow
+
+.skills__item.palette3
+  background: $color-blue-light
+
+.skills__item.palette4
+  background: $color-blue-medium
+
+.skills__item.palette5
+  background: $color-blue-dark
