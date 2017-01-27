@@ -76,6 +76,9 @@ configure :build do
   # Enable cache buster
   activate :cache_buster
 
+  activate :relative_assets
+  set :relative_links, true
+
   # Activate autoprefixer
   activate :autoprefixer
 end
