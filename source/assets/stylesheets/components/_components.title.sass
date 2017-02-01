@@ -4,12 +4,22 @@ h2
   letter-spacing: 0.1em
   margin-bottom: 10px
 
+  +bp(lg)
+    font-size: 32px
 
-.about
+
+.section
   +bp(md)
     display: flex
     align-items: flex-start
     margin-top: 90px
+  +bp(lg)
+    margin-top: 120px
+
+.about
+  +bp(xl)
+    display: flex
+    align-items: center
 
 .about__photo
   position: relative
@@ -19,8 +29,16 @@ h2
   margin: 60px 0 30px 0
 
   +bp(md)
+    display: none
+
+  +bp(lg)
     +i(5/12)
+    display: block
     margin-top: 0
+
+  +bp(xl)
+    +i(6/12 md)
+    margin-bottom: 0
 
 .about__image
   position: relative
@@ -47,6 +65,8 @@ h2
     // display: inline-block
     // width: 100%
     font-size: 36px
+    +bp(lg)
+      font-size: 40px
 
   .section__title
     color: $color-white
@@ -54,11 +74,27 @@ h2
     letter-spacing: 0.5em
     text-align: right
 
+    &:before
+      display: none
+
+    +bp(lg)
+      font-size: 20px
+
+    span
+      +bp(lg)
+        font-size: 60px
+
 .about__description
 
   +bp(md)
+    width: 100%
+
+  +bp(lg)
     +i(7/12 md)
     padding-left: 30px
+
+  +bp(xl)
+    +i(6/12 md)
 
   h2
     display: none
@@ -76,6 +112,9 @@ h2
   +bp(md)
     margin-top: 30px
     font-size: 22px
+
+  +bp(lg)
+    font-size: 30px
 
   &:before
     content: ''
@@ -96,6 +135,9 @@ h2
     +bp(md)
       font-size: 52px
 
+    +bp(lg)
+      font-size: 70px
+
 // Portfólio
 
 .portfolio__list
@@ -108,7 +150,7 @@ h2
     margin-bottom: 20px
 
 .caption
-  position: relatpost
+  position: relative
   p
     margin-bottom: 10px
     letter-spacing: 0.05em
@@ -123,11 +165,13 @@ h2
 
 // Blog
 
+.blog
+
+  +bp(lg)
+    margin-top: 90px
+
 .blog__list
   margin: 0
-
-  +bp(md)
-    // display: flex
 
 .blog__post
   margin-bottom: 60px

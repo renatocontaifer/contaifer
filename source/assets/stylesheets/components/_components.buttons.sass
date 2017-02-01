@@ -7,14 +7,29 @@
   background: transparent
   color: $color-black
   border: 2px solid $color-black
-  font-size: 12px
+  font-size: 11px
   text-transform: uppercase
   padding: 8px 16px
   letter-spacing: 0.1em
   line-height: 1
   border-radius: 0
+  transition: 0.5s ease
 
 .btn--blog
   border: 2px solid $color-brand
   color: $color-brand
   width: 100%
+
+  +bp(lg)
+    max-width: 300px
+
+  &:hover
+    border: 2px solid $color-black
+    color: $color-black
+
+.btn--projeto
+  border: 2px solid $color-brand
+  color: $color-brand
+  &:hover
+    border: 2px solid $color-black
+    color: $color-black

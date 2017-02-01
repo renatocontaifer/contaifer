@@ -4,38 +4,56 @@
   display: flex
   align-items: center
 
+  +bp(lg)
+    height: auto
+
 .hero__content.container
   padding: 0
-  // height: 100%
+
+  +bp(lg)
+    // height: 100vh
+    overflow: hidden
 
 .hero__about
   display: flex
   align-items: center
-  height: 100%
 
   +bp(lg)
     border-bottom: 1px solid #ccc
 
 .hero__photo
   display: none
-  width: 40%
   height: 100%
   float: left
 
   +bp(lg)
     display: block
-    padding: 0 20px
+    padding: 30px 30px 0
+    width: 45%
+
+  // +bp(xl)
+  //   display: block
+  //   padding: 30px 30px 0
+  //   width: 47%
+
+  img
+    +bp(lg)
+      width: auto
+      min-width: 100%
+      vertical-align: bottom
 
 .hero__description
   // padding: 0 15px
 
   +bp(lg)
-    width: 60%
+    width: 55%
     float: right
-
+    margin-left: -20px
 
 .hero__copy
-  // margin-left: -30px
+  +bp(xl)
+    margin-top: 60px
+
   h3
     font-family: $sans-serif
     font-size: 14px
@@ -45,8 +63,13 @@
     +bp(sm)
     font-size: 20px
 
-    a
-      color: $color-black
+.startae
+  color: $color-black
+  text-decoration: none
+  transition: 1s ease all
+  padding-bottom: 2px
+  &:hover
+    border-bottom: 1px solid $color-black
 
 .tagline--primary
   font-family: 'montserratextra_bold'
@@ -64,6 +87,9 @@
   +bp(md)
     font-size: 80px
 
+  +bp(xl)
+    font-size: 85px
+
 .tagline--secondary
   font-family: 'montserratextra_bold'
   text-transform: uppercase
@@ -77,3 +103,6 @@
 
   +bp(md)
     font-size: 28px
+
+  // +bp(xl)
+  //   font-size: 32px

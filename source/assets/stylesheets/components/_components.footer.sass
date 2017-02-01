@@ -7,6 +7,9 @@
   padding: 50px 0
   clear: both
 
+  +bp(lg)
+    padding: 200px 0
+
 .logo--footer
   position: relative
   top: auto
@@ -20,8 +23,15 @@
   cursor: pointer
   margin: 0 auto 20px auto
 
+  +bp(xl)
+    margin-bottom: 30px
+
 .social
   margin: 0
+
+  +bp(xl)
+    margin-top: 30px
+
   a
     color: $color-white
     font-family: 'montserratregular'
@@ -30,6 +40,16 @@
     font-size: 13px
     line-height: 3
     letter-spacing: 0.1em
+
+    +bp(lg)
+      line-height: 1
+      padding: 5px 10px
+      display: inline-block
+      border: 2px solid transparent
+      transition: 0.5s ease all
+
+    &:hover
+      border: 2px solid $color-white
 
 .social__item
 
@@ -40,6 +60,8 @@
     &:last-child
       margin-right: 0
 
+  +bp(lg)
+    margin-right: 5px
 
 .partners
   padding: 50px 0
@@ -56,7 +78,8 @@
   a
     color: $color-black
     text-decoration: none
+    padding-bottom: 2px
 
     &:hover
-      text-decoration: underline
+      border-bottom: 1px solid $color-black
 

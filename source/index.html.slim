@@ -24,11 +24,11 @@ section.row
             h3 I'm Renato Contaifer
             h1.tagline--primary UI Designer
             h2.tagline--secondary & Front-End Developer
-            h3 at <a href="http://www.startae.com" target="_blank">Startaê</a> in Brasília, Brazil
+            h3 at <a class="startae" href="http://www.startae.com" target="_blank">Startaê</a> in Brasília, Brazil
 
 section.row.some-stuff
   .container
-    h2.section__title Some stuff <span>I love<br> to make</span>
+    h2 Some stuff <span>I love to make</span>
     p I believe that skills are about the passion for learning something. Here some of those cool things I’ve been doing and learning.
 
     .skills
@@ -39,22 +39,22 @@ section.row.some-stuff
 
         li.skills__item.palette2
           h3 Responsive  <br>Web Design
-          p There is no way for design a digital product without considering people and the human behavior. I like to get involved with discovery. Maybe running tests, making interviews or prototyping ideas.
+          p Creative process turning concepts into useful, elegant and responsive user interfaces.
 
         li.skills__item.palette3
           h3 Front-End <br>Coding
-          p There is no way for design a digital product without considering people and the human behavior. I like to get involved with discovery. Maybe running tests, making interviews or prototyping ideas.
+          p Developing modular interfaces take advantage of HTML, CSS and JavaScript. Make design decisions directly in the browser sounds great.
 
         li.skills__item.palette4
           h3 Writing <br>Content
-          p There is no way for design a digital product without considering people and the human behavior. I like to get involved with discovery. Maybe running tests, making interviews or prototyping ideas.
+          p An essence of the communication skills. Some time ago it's started to make a lot of sense to write more, since express ideas to materialize concepts.
 
         li.skills__item.palette5
           h3 Play <br>Music
-          p There is no way for design a digital product without considering people and the human behavior. I like to get involved with discovery. Maybe running tests, making interviews or prototyping ideas.
+          p During a time music was big part of my life. Is where I also find great inspiration source. Would like to share some old productions.
 
   .container
-    section.about
+    section.section.about
       .about__photo
         .about__title
           h2.section__title Into the<br><span>Journey</span>
@@ -66,61 +66,81 @@ section.row.some-stuff
         p These 34 years of my journey to here was a path built with multiple trails. Along the way, I found a passion for learning that motivated me to dream out of the box.
         p I graduated in Tourism and worked for airline companies about five years. The airport was my universe. I built some great relationships, but I would like to fly in different directions. I should follow my heart.
         p Both music and design are my passions, but the music came first. During some years I experienced work with music and professional audio. Self-taught learning provided me opportunities to have my first actions as an entrepreneur.
-        p In 2008, through a fit with music, Web Design crossed my way. I met HTML and CSS creating MySpace® templates for bands. Since then I’ve built a career as a Designer and Frontend Developer, working remotely for digital agencies, startups, and government.
+        p In 2008, through a fit with music, Web Design crossed my way. Since then I’ve built a career as a Designer and Frontend Developer, working remotely for digital agencies, startups, and government.
         p Last year I joined Startaê, an awesome Product Design studio from Brazil. A lot of things changed. There I spend my days working with great people, developing startup products and enjoying a culture that I’ve never seen before.
 
-    section.portfolio
+    section.section.portfolio
       ul.portfolio__list
         li.portfolio__item
           h2.section__title Featured <span>Work</span>
-
+    - data.portfolio.each do |portfolio|
+      - unless portfolio.type
         li.portfolio__item
           .portfolio__cover
-            = image_tag("projects/irie-music.jpg", alt: 'Irie Music', class: 'portfolio__img')
+            = image_tag("#{portfolio.title.parameterize}.jpg", class: 'thumb', alt: '')
           .caption
             .caption__content
-              h3.portfolio__title Irie Music - Mobile App
-              p UX/UI Design / Responsive Design / Frontend / Backend
-              a.btn.btn-projeto Ver Projeto
+              h3.portfolio__title = portfolio.title
+              p = portfolio.skills
+              - if portfolio.link
+                a.btn.btn--projeto href=portfolio.link target="blank" Ver Projeto
 
-        li.portfolio__item
-          .portfolio__cover
-            = image_tag("projects/e-vida.jpg", alt: 'Irie Music', class: 'portfolio__img')
-          .caption
-            .caption__content
-              h3.portfolio__title E-Vida
-              p UX/UI Design / Responsive Design / Frontend / Backend
-              a.btn.btn-projeto Ver Projeto
 
-        li.portfolio__item
-          .portfolio__cover
-            = image_tag("projects/yummmy.jpg", alt: 'Irie Music', class: 'portfolio__img')
-          .caption
-            .caption__content
-              h3.portfolio__title Yummmy
-              p UX/UI Design / Responsive Design / Frontend / Backend
-              a.btn.btn-projeto Ver Projeto
+          / - else
+      / .container.container--overall
+      /   .overall.event
+      /     .overall__icon class="overall__icon--#{event.icon}"
+      /     h2.overall__title = event.title
+      /     p.overall__description = event.description
+      / .overall--order
 
-        li.portfolio__item
-          .portfolio__cover
-            = image_tag("projects/jbb.jpg", alt: 'Irie Music', class: 'portfolio__img')
-          .caption
-            .caption__content
-              h3.portfolio__title Jardim Botânico de Brasília
-              p UX/UI Design / Responsive Design / Frontend / Backend
-              a.btn.btn-projeto Ver Projeto
+        / li.portfolio__item
+        /   .portfolio__cover
+        /     = image_tag("projects/irie-music.jpg", alt: 'Irie Music', class: 'portfolio__img')
+        /   .caption
+        /     .caption__content
+        /       h3.portfolio__title = portfolio.title
+        /       p = portfolio.skills
+        /       a.btn.btn--projeto Ver Projeto
 
-        li.portfolio__item
-          .portfolio__cover
-            = image_tag("projects/light-design.jpg", alt: 'Irie Music', class: 'portfolio__img')
-          .caption
-            .caption__content
-              h3.portfolio__title Light Design + Exporlux
-              p UX/UI Design / Responsive Design / Frontend / Backend
-              a.btn.btn--project Ver Projeto
+        / li.portfolio__item
+        /   .portfolio__cover
+        /     = image_tag("projects/e-vida.jpg", alt: 'Irie Music', class: 'portfolio__img')
+        /   .caption
+        /     .caption__content
+        /       h3.portfolio__title E-Vida
+        /       p UX/UI Design / Responsive Design / Frontend / Backend
+        /       a.btn.btn--projeto Ver Projeto
+
+        / li.portfolio__item
+        /   .portfolio__cover
+        /     = image_tag("projects/yummmy.jpg", alt: 'Irie Music', class: 'portfolio__img')
+        /   .caption
+        /     .caption__content
+        /       h3.portfolio__title Yummmy
+        /       p UX/UI Design / Responsive Design / Frontend / Backend
+        /       a.btn.btn--projeto Ver Projeto
+
+        / li.portfolio__item
+        /   .portfolio__cover
+        /     = image_tag("projects/jbb.jpg", alt: 'Irie Music', class: 'portfolio__img')
+        /   .caption
+        /     .caption__content
+        /       h3.portfolio__title Jardim Botânico de Brasília
+        /       p UX/UI Design / Responsive Design / Frontend / Backend
+        /       a.btn.btn--projeto Ver Projeto
+
+        / li.portfolio__item
+        /   .portfolio__cover
+        /     = image_tag("projects/light-design.jpg", alt: 'Irie Music', class: 'portfolio__img')
+        /   .caption
+        /     .caption__content
+        /       h3.portfolio__title Light Design + Exporlux
+        /       p UX/UI Design / Responsive Design / Frontend / Backend
+        /       a.btn.btn--projeto Ver Projeto
 
     section.blog
-      h2.section__title Published <span>Articles</span>
+      h2.section__title Featured <span>Articles</span>
       ul.blog__list
         li.blog__post
           h3 Como a economia colaborativa está revolucionando a vida de freelancers.
@@ -145,7 +165,7 @@ section.row.some-stuff
   footer.footer
     section.contact
       h1.logo.logo--footer
-      h4 Find me and get in touch
+      h4 Let's talk? get in touch
       ul.social
         li.social__item
           a href="" Linkedin
