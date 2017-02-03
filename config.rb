@@ -3,7 +3,7 @@
 
 # Site Settings
 # ----------------------------------------------
-@google_analytics = "UA-XXXXXXX-X"
+@google_analytics = "UA-30710686-1"
 
 # Slim HTML
 # ----------------------------------------------
