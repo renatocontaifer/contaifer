@@ -90,19 +90,19 @@ section.row.some-stuff
     section.blog
       h2.section__title Featured <span>Articles</span>
       ul.blog__list
-    - data.blog.each do |blog|
-      - unless blog.type
-        li.blog__post
-          h3 = blog.title
-          p.description = blog.description
-          - if blog.link
-            a.btn.btn--blog href=blog.link target="__blank" = blog.cta
+        - data.blog.each do |blog|
+          - unless blog.type
+          li.blog__post
+            h3 = blog.title
+            p.description = blog.description
+            - if blog.link
+              a.btn.btn--blog href=blog.link target="__blank" = blog.cta
 
 
   footer.footer
     section.contact
       h1.logo.logo--footer
-      h4 Find me and get in touch
+      h4 See more and get in touch
       ul.social
         li.social__item
           a href="https://br.linkedin.com/in/renato-contaifer-58463250" target="__blank" Linkedin
