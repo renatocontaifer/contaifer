@@ -8,10 +8,7 @@
   clear: both
 
   +bp(lg)
-    padding: 200px 0
-
-  +bp(xxl)
-    padding: 260px 0
+    padding: 150px 0
 
 .logo--footer
   position: relative
@@ -86,4 +83,12 @@
 
     &:hover
       border-bottom: 1px solid $color-black
+
+.back-top
+  +replace()
+  width: 24px
+  height: 21px
+  background: url(../images/back-top.svg)
+  background-size: contain
+  margin: 30px auto 0 auto
 
