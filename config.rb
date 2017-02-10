@@ -4,6 +4,8 @@
 # Site Settings
 # ----------------------------------------------
 @google_analytics = "UA-30710686-1"
+@site_url = "http://renatocontaifer.com"
+@site_name = "Renato Contaifer - UI/UX Designer & Front-End Developer"
 
 # Slim HTML
 # ----------------------------------------------

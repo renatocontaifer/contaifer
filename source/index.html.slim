@@ -1,4 +1,4 @@
-section.row
+section.row#home
   .branding-palette
     .column.column--1
     .column.column--2
@@ -46,28 +46,28 @@ section.row.some-stuff
           p Developing modular interfaces take advantage of HTML, CSS and JavaScript. Make design decisions directly in the browser sounds great.
 
         li.skills__item.palette4
-          h3 Writing <br>Expression
+          h3 Writing <br><br>
           p An essence of the communication skills. Some time ago it's started to make a lot of sense to write more, since express ideas to materialize concepts.
 
         li.skills__item.palette5
-          h3 Play <br>Music
+          h3 Music <br><br>
           p During a time music was big part of my life. Is where I also find great inspiration source. Would like to share some old productions.
 
   .container
-    section.section.about
-      .about__photo
-        .about__title
-          h2.section__title Into the<br><span>Journey</span>
-        .about__image
-          = image_tag("about.jpg", alt: 'Renato Contaifer')
+    / section.section.about
+    /   .about__photo
+    /     .about__title
+    /       h2.section__title Into the<br><span>Journey</span>
+    /     .about__image
+    /       = image_tag("about.jpg", alt: 'Renato Contaifer')
 
-      .about__description
-        h2 Dream out of the box
-        p These 34 years of my journey to here was a path built with multiple trails. Along the way, I found a passion for learning that motivated me to dream out of the box.
-        p I graduated in Tourism and worked for airline companies about five years. The airport was my universe. I built some great relationships, but I would like to fly in different directions. I should follow my heart.
-        p Both music and design are my passions, but the music came first. During some years I experienced work with music and professional audio. Self-taught learning provided me opportunities to have my first actions as an entrepreneur.
-        p In 2008, through a fit with music, Web Design crossed my way. Since then I’ve built a career as a Designer and Frontend Developer, working remotely for digital agencies, startups, and government.
-        p Last year I joined Startaê, an awesome Product Design studio from Brazil. A lot of things changed. There I spend my days working with great people, developing startup products and enjoying a culture that I’ve never seen before.
+    /   .about__description
+    /     h2 Dream out of the box
+    /     p These 34 years of my journey to here was a path built with multiple trails. Along the way, I found a passion for learning that motivated me to dream out of the box.
+    /     p I graduated in Tourism and worked for airline companies about five years. The airport was my universe. I built some great relationships, but I would like to fly in different directions. I should follow my heart.
+    /     p Both music and design are my passions, but the music came first. During some years I experienced work with music and professional audio. Self-taught learning provided me opportunities to have my first actions as an entrepreneur.
+    /     p In 2008, through a fit with music, Web Design crossed my way. Since then I’ve built a career as a Designer and Frontend Developer, working remotely for digital agencies, startups, and government.
+    /     p Last year I joined Startaê, an awesome Product Design studio from Brazil. A lot of things changed. There I spend my days working with great people, developing startup products and enjoying a culture that I’ve never seen before.
 
     section.section.portfolio
       ul.portfolio__list
@@ -83,7 +83,7 @@ section.row.some-stuff
               h3.portfolio__title = portfolio.title
               p = portfolio.skills
               - if portfolio.link
-                a.btn.btn--projeto href=portfolio.link target="__blank" Ver Projeto
+                a.btn.btn--projeto href=portfolio.link target="__blank" See project
 
 
 
@@ -139,6 +139,7 @@ section.row.some-stuff
           a href="http://elpadrino061.com" target="__blank" el Padrino 061,
         li.partner__item
           a href="http://pierosalardi.com" target="__blank" Piero Salardi
+      a.back-top#backTop href="#home" Back to top
 
 
 
